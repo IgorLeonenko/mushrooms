@@ -34,6 +34,10 @@ gem 'jbuilder', '~> 2.5'
 # generate fake names
 gem 'faker', '1.8.7'
 
+# bootsrap for better styling
+gem 'bootstrap', '~> 4.1.1'
+gem 'jquery-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
