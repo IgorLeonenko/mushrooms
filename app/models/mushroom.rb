@@ -1,7 +1,6 @@
 class Mushroom < ApplicationRecord
   include Filterable
 
-  # scope :name, -> (name) { where name: name}
   scope :edible, -> (edible) { where edible: edible }
   scope :cap_shape, -> (cap_shape) { where cap_shape: cap_shape }
   scope :cap_surface, -> (cap_surface) { where cap_surface: cap_surface }
