@@ -1,7 +1,7 @@
 # README
 
 Test application for filtering mushrooms dataset from [https://archive.ics.uci.edu/ml/datasets/Mushroom](https://archive.ics.uci.edu/ml/datasets/Mushroom).
-App hosted on Heroku [https://mushrooms-tests.herokuapp.com/](mushrooms)
+App hosted on Heroku [mushrooms](https://mushrooms-tests.herokuapp.com/)
 
 For local usage you should to:
 ```
