@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Test application for filtering mushrooms dataset from [https://archive.ics.uci.edu/ml/datasets/Mushroom](https://archive.ics.uci.edu/ml/datasets/Mushroom).
+App hosted on Heroku [https://mushrooms-tests.herokuapp.com/](mushrooms)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+For local usage you should to:
+```
+1) git clone git@github.com:IgorLeonenko/mushrooms.git
+2) cd app_directory
+3) bin/setup or rake db:create db:migarte data_parser:parse
+4) rails s
+```
