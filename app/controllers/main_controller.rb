@@ -1,6 +1,9 @@
+require_relative "../../lib/consts"
+
 class MainController < ApplicationController
   def index
     @mushrooms = Mushroom.filter(filtering_params)
+    @attributes = Mushroom.column_names
   end
 
   private

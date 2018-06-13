@@ -1,2 +1,278 @@
-<h1>Main#index</h1>
-<p>Find me in app/views/main/index.html.erb</p>
+<div class="container-fluid">
+  <div class="row" style="margin-bottom: 10px;">
+    <div class="col-12">
+      <%= form_tag root_path, method: 'get', id: "search" do %>
+        <div class="form-group form-check">
+          <%= hidden_field_tag :edible, 'false' %>
+          <%= check_box_tag :edible, true, params[:edible] == "true", class: "form-check-input" %>
+          <%= label_tag(:edible, "edible", class: "form-check-label") %>
+        </div>
+        <div class="form-group form-check">
+          <%= hidden_field_tag :bruises, 'false' %>
+          <%= check_box_tag :bruises, true, params[:bruises] == "true", class: "form-check-input" %>
+          <%= label_tag(:bruises, "bruises", class: "form-check-label") %>
+        </div>
+        <div class="form-group">
+          <%= label_tag(:cap_shape, "cap shape") %>
+          <%=
+            select_tag(
+              :cap_shape,
+              options_for_select(CAP_SHAPE.map { |e| [e[1], e[1]] }.insert(0, "")),
+              class: "form-control",
+            )
+          %>
+        </div>
+        <div class="form-group">
+          <%= label_tag(:cap_surface, "cap surface") %>
+          <%=
+            select_tag(
+              :cap_surface,
+              options_for_select(CAP_SURFASE.map { |e| [e[1], e[1]] }.insert(0, "")),
+              class: "form-control",
+            )
+          %>
+        </div>
+        <div class="form-group">
+          <%= label_tag(:cap_color, "cap color") %>
+          <%=
+            select_tag(
+              :cap_color,
+              options_for_select(CAP_COLOR.map { |e| [e[1], e[1]] }.insert(0, "")),
+              class: "form-control",
+            )
+          %>
+        </div>
+        <div class="form-group">
+          <%= label_tag(:odor, "odor") %>
+          <%=
+            select_tag(
+              :odor,
+              options_for_select(ODOR.map { |e| [e[1], e[1]] }.insert(0, "")),
+              class: "form-control",
+            )
+          %>
+        </div>
+        <div class="form-group">
+          <%= label_tag(:gill_attachment, "gill attachment") %>
+          <%=
+            select_tag(
+              :gill_attachment,
+              options_for_select(GILL_ATTACHMENT.map { |e| [e[1], e[1]] }.insert(0, "")),
+              class: "form-control",
+            )
+          %>
+        </div>
+        <div class="form-group">
+          <%= label_tag(:gill_spacing, "gill spacing") %>
+          <%=
+            select_tag(
+              :gill_spacing,
+              options_for_select(GILL_SPACING.map { |e| [e[1], e[1]] }.insert(0, "")),
+              class: "form-control",
+            )
+          %>
+        </div>
+        <div class="form-group">
+          <%= label_tag(:gill_size, "gill size") %>
+          <%=
+            select_tag(
+              :gill_size,
+              options_for_select(GILL_SIZE.map { |e| [e[1], e[1]] }.insert(0, "")),
+              class: "form-control",
+            )
+          %>
+        </div>
+        <div class="form-group">
+          <%= label_tag(:gill_color, "gill color") %>
+          <%=
+            select_tag(
+              :gill_color,
+              options_for_select(GILL_COLOR.map { |e| [e[1], e[1]] }.insert(0, "")),
+              class: "form-control",
+            )
+          %>
+        </div>
+        <div class="form-group">
+          <%= label_tag(:stalk_shape, "stalk shape") %>
+          <%=
+            select_tag(
+              :stalk_shape,
+              options_for_select(STALK_SHAPE.map { |e| [e[1], e[1]] }.insert(0, "")),
+              class: "form-control",
+            )
+          %>
+        </div>
+        <div class="form-group">
+          <%= label_tag(:stalk_root, "stalk root") %>
+          <%=
+            select_tag(
+              :stalk_root,
+              options_for_select(STALK_ROOT.map { |e| [e[1], e[1]] }.insert(0, "")),
+              class: "form-control",
+            )
+          %>
+        </div>
+        <div class="form-group">
+          <%= label_tag(:stalk_surface_above_ring, "stalk surface above ring") %>
+          <%=
+            select_tag(
+              :stalk_surface_above_ring,
+              options_for_select(STALK_SURFACE_ABOVE_RING.map { |e| [e[1], e[1]] }.insert(0, "")),
+              class: "form-control",
+            )
+          %>
+        </div>
+        <div class="form-group">
+          <%= label_tag(:stalk_surface_below_ring, "stalk surface below ring") %>
+          <%=
+            select_tag(
+              :stalk_surface_below_ring,
+              options_for_select(STALK_SURFACE_BELOW_RING.map { |e| [e[1], e[1]] }.insert(0, "")),
+              class: "form-control",
+            )
+          %>
+        </div>
+        <div class="form-group">
+          <%= label_tag(:stalk_color_above_ring, "stalk color above ring") %>
+          <%=
+            select_tag(
+              :stalk_color_above_ring,
+              options_for_select(STALK_COLOR_ABOVE_RING.map { |e| [e[1], e[1]] }.insert(0, "")),
+              class: "form-control",
+            )
+          %>
+        </div>
+        <div class="form-group">
+          <%= label_tag(:STALK_COLOR_BELOW_RING, "stalk color below ring") %>
+          <%=
+            select_tag(
+              :STALK_COLOR_BELOW_RING,
+              options_for_select(STALK_COLOR_BELOW_RING.map { |e| [e[1], e[1]] }.insert(0, "")),
+              class: "form-control",
+            )
+          %>
+        </div>
+        <div class="form-group">
+          <%= label_tag(:veil_type, "veil type") %>
+          <%=
+            select_tag(
+              :veil_type,
+              options_for_select(VEIL_TYPE.map { |e| [e[1], e[1]] }.insert(0, "")),
+              class: "form-control",
+            )
+          %>
+        </div>
+        <div class="form-group">
+          <%= label_tag(:veil_color, "veil color") %>
+          <%=
+            select_tag(
+              :veil_color,
+              options_for_select(VEIL_COLOR.map { |e| [e[1], e[1]] }.insert(0, "")),
+              class: "form-control",
+            )
+          %>
+        </div>
+        <div class="form-group">
+          <%= label_tag(:ring_number, "ring number") %>
+          <%=
+            select_tag(
+              :ring_number,
+              options_for_select(RING_NUMBER.map { |e| [e[1], e[1]] }.insert(0, "")),
+              class: "form-control",
+            )
+          %>
+        </div>
+        <div class="form-group">
+          <%= label_tag(:ring_type, "ring type") %>
+          <%=
+            select_tag(
+              :ring_type,
+              options_for_select(RING_TYPE.map { |e| [e[1], e[1]] }.insert(0, "")),
+              class: "form-control",
+            )
+          %>
+        </div>
+        <div class="form-group">
+          <%= label_tag(:spore_print_color, "spore print color") %>
+          <%=
+            select_tag(
+              :spore_print_color,
+              options_for_select(SPORE_PRINT_COLOR.map { |e| [e[1], e[1]] }.insert(0, "")),
+              class: "form-control",
+            )
+          %>
+        </div>
+        <div class="form-group">
+          <%= label_tag(:population, "population") %>
+          <%=
+            select_tag(
+              :population,
+              options_for_select(POPULATION.map { |e| [e[1], e[1]] }.insert(0, "")),
+              class: "form-control",
+            )
+          %>
+        </div>
+        <div class="form-group">
+          <%= label_tag(:habitat, "habitat") %>
+          <%=
+            select_tag(
+              :habitat,
+              options_for_select(HABITAT.map { |e| [e[1], e[1]] }.insert(0, "")),
+              class: "form-control",
+            )
+          %>
+        </div>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+        <%= link_to "Reset", root_path, class: "btn" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <% @attributes.each do |attr| %>
+                <th><%= attr %></th>
+              <% end %>
+            </tr>
+          </thead>
+          <tbody>
+            <% @mushrooms.each do |m| %>
+              <tr>
+                <td><%= m.id %>
+                <td><%= m.name %></td>
+                <td><%= m.edible %></td>
+                <td><%= m.cap_shape %></td>
+                <td><%= m.cap_surface %></td>
+                <td><%= m.cap_color %></td>
+                <td><%= m.bruises %></td>
+                <td><%= m.odor %></td>
+                <td><%= m.gill_attachment %></td>
+                <td><%= m.gill_spacing %></td>
+                <td><%= m.gill_size %></td>
+                <td><%= m.gill_color %></td>
+                <td><%= m.stalk_shape %></td>
+                <td><%= m.stalk_root %></td>
+                <td><%= m.stalk_surface_above_ring %></td>
+                <td><%= m.stalk_surface_below_ring %></td>
+                <td><%= m.stalk_color_above_ring %></td>
+                <td><%= m.stalk_color_below_ring %></td>
+                <td><%= m.veil_type %></td>
+                <td><%= m.veil_color %></td>
+                <td><%= m.ring_number %></td>
+                <td><%= m.ring_type %></td>
+                <td><%= m.spore_print_color %></td>
+                <td><%= m.population %></td>
+                <td><%= m.habitat %></td>
+                <td><%= m.created_at.strftime("%H:%M") %></td>
+                <td><%= m.updated_at.strftime("%H:%M") %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
