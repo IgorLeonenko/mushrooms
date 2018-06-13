@@ -32,7 +32,8 @@
               :cap_surface,
               options_for_select(
                 CAP_SURFASE.map { |e| [e[1], e[1]] }.insert(0, ""),
-                params[:cap_surface]),
+                params[:cap_surface]
+              ),
               class: "form-control",
             )
           %>
@@ -44,7 +45,8 @@
               :cap_color,
               options_for_select(
                 CAP_COLOR.map { |e| [e[1], e[1]] }.insert(0, ""),
-                params[:cap_color]),
+                params[:cap_color]
+              ),
               class: "form-control",
             )
           %>
@@ -55,9 +57,9 @@
             select_tag(
               :odor,
               options_for_select(
-                ODOR.map { |e| [e[1], e[1]] }.insert(0, "")),
+                ODOR.map { |e| [e[1], e[1]] }.insert(0, ""),
                 params[:odor]
-              )
+              ),
               class: "form-control",
             )
           %>
@@ -68,9 +70,9 @@
             select_tag(
               :gill_attachment,
               options_for_select(
-                GILL_ATTACHMENT.map { |e| [e[1], e[1]] }.insert(0, "")),
+                GILL_ATTACHMENT.map { |e| [e[1], e[1]] }.insert(0, ""),
                 params[:gill_attachment]
-              )
+              ),
               class: "form-control",
             )
           %>
@@ -81,9 +83,9 @@
             select_tag(
               :gill_spacing,
               options_for_select(
-                GILL_SPACING.map { |e| [e[1], e[1]] }.insert(0, "")),
+                GILL_SPACING.map { |e| [e[1], e[1]] }.insert(0, ""),
                 params[:gill_spacing]
-              )
+              ),
               class: "form-control",
             )
           %>
@@ -94,9 +96,9 @@
             select_tag(
               :gill_size,
               options_for_select(
-                GILL_SIZE.map { |e| [e[1], e[1]] }.insert(0, "")),
+                GILL_SIZE.map { |e| [e[1], e[1]] }.insert(0, ""),
                 params[:gill_size]
-              )
+              ),
               class: "form-control",
             )
           %>
@@ -107,9 +109,9 @@
             select_tag(
               :gill_color,
               options_for_select(
-                GILL_COLOR.map { |e| [e[1], e[1]] }.insert(0, "")),
+                GILL_COLOR.map { |e| [e[1], e[1]] }.insert(0, ""),
                 params[:gill_color]
-              )
+              ),
               class: "form-control",
             )
           %>
@@ -120,9 +122,9 @@
             select_tag(
               :stalk_shape,
               options_for_select(
-                STALK_SHAPE.map { |e| [e[1], e[1]] }.insert(0, "")),
+                STALK_SHAPE.map { |e| [e[1], e[1]] }.insert(0, ""),
                 params[:stalk_shape]
-              )
+              ),
               class: "form-control",
             )
           %>
@@ -133,9 +135,9 @@
             select_tag(
               :stalk_root,
               options_for_select(
-                STALK_ROOT.map { |e| [e[1], e[1]] }.insert(0, "")),
+                STALK_ROOT.map { |e| [e[1], e[1]] }.insert(0, ""),
                 params[:stalk_root]
-              )
+              ),
               class: "form-control",
             )
           %>
@@ -146,9 +148,9 @@
             select_tag(
               :stalk_surface_above_ring,
               options_for_select(
-                STALK_SURFACE_ABOVE_RING.map { |e| [e[1], e[1]] }.insert(0, "")),
+                STALK_SURFACE_ABOVE_RING.map { |e| [e[1], e[1]] }.insert(0, ""),
                 params[:stalk_surface_above_ring]
-              )
+              ),
               class: "form-control",
             )
           %>
@@ -159,9 +161,9 @@
             select_tag(
               :stalk_surface_below_ring,
               options_for_select(
-                STALK_SURFACE_BELOW_RING.map { |e| [e[1], e[1]] }.insert(0, "")),
+                STALK_SURFACE_BELOW_RING.map { |e| [e[1], e[1]] }.insert(0, ""),
                 params[:stalk_surface_below_ring]
-              )
+              ),
               class: "form-control",
             )
           %>
@@ -172,9 +174,9 @@
             select_tag(
               :stalk_color_above_ring,
               options_for_select(
-                STALK_COLOR_ABOVE_RING.map { |e| [e[1], e[1]] }.insert(0, "")),
+                STALK_COLOR_ABOVE_RING.map { |e| [e[1], e[1]] }.insert(0, ""),
                 params[:stalk_color_above_ring]
-              )
+              ),
               class: "form-control",
             )
           %>
@@ -185,9 +187,9 @@
             select_tag(
               :stalk_color_below_ring,
               options_for_select(
-                STALK_COLOR_BELOW_RING.map { |e| [e[1], e[1]] }.insert(0, "")),
+                STALK_COLOR_BELOW_RING.map { |e| [e[1], e[1]] }.insert(0, ""),
                 params[:stalk_color_below_ring]
-              )
+              ),
               class: "form-control",
             )
           %>
@@ -198,9 +200,9 @@
             select_tag(
               :veil_type,
               options_for_select(
-                VEIL_TYPE.map { |e| [e[1], e[1]] }.insert(0, "")),
+                VEIL_TYPE.map { |e| [e[1], e[1]] }.insert(0, ""),
                 params[:veil_type]
-              )
+              ),
               class: "form-control",
             )
           %>
@@ -211,9 +213,9 @@
             select_tag(
               :veil_color,
               options_for_select(
-                VEIL_COLOR.map { |e| [e[1], e[1]] }.insert(0, "")),
+                VEIL_COLOR.map { |e| [e[1], e[1]] }.insert(0, ""),
                 params[:veil_color]
-              )
+              ),
               class: "form-control",
             )
           %>
@@ -224,9 +226,9 @@
             select_tag(
               :ring_number,
               options_for_select(
-                RING_NUMBER.map { |e| [e[1], e[1]] }.insert(0, "")),
+                RING_NUMBER.map { |e| [e[1], e[1]] }.insert(0, ""),
                 params[:ring_number]
-              )
+              ),
               class: "form-control",
             )
           %>
@@ -237,9 +239,9 @@
             select_tag(
               :ring_type,
               options_for_select(
-                RING_TYPE.map { |e| [e[1], e[1]] }.insert(0, "")),
+                RING_TYPE.map { |e| [e[1], e[1]] }.insert(0, ""),
                 params[:ring_type]
-              )
+              ),
               class: "form-control",
             )
           %>
@@ -250,9 +252,9 @@
             select_tag(
               :spore_print_color,
               options_for_select(
-                SPORE_PRINT_COLOR.map { |e| [e[1], e[1]] }.insert(0, "")),
+                SPORE_PRINT_COLOR.map { |e| [e[1], e[1]] }.insert(0, ""),
                 params[:spore_print_color]
-              )
+              ),
               class: "form-control",
             )
           %>
@@ -263,9 +265,9 @@
             select_tag(
               :population,
               options_for_select(
-                POPULATION.map { |e| [e[1], e[1]] }.insert(0, "")),
+                POPULATION.map { |e| [e[1], e[1]] }.insert(0, ""),
                 params[:population]
-              )
+              ),
               class: "form-control",
             )
           %>
@@ -276,9 +278,9 @@
             select_tag(
               :habitat,
               options_for_select(
-                HABITAT.map { |e| [e[1], e[1]] }.insert(0, "")),
+                HABITAT.map { |e| [e[1], e[1]] }.insert(0, ""),
                 params[:habitat]
-              )
+              ),
               class: "form-control",
             )
           %>
